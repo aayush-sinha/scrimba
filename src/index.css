@@ -52,9 +52,91 @@
   position: relative;
   background: #fff;
 }
-.HomePage{
-  max-width: initial;
-  overflow-x: hidden;
+
+.header__text{
+  margin-right: 25%;
+  margin-top: 14%;
+  font-size: 5.5rem;
+  font-weight: 600;
+  font-family: 'Karla', sans-serif;
+  line-height: 96px;
+  text-shadow: 4px 4px 0 #FFF;
+  z-index: 30;
+}
+@media (max-width: 425px){
+  .header__text{
+      margin-right: 10%;
+      margin-top: 14%;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Karla', sans-serif;
+      line-height: 40px;
+      text-shadow: 4px 4px 0 #FFF;
+      z-index: 30;
+  }
+}
+.header__button{
+  margin-right: 25%;
+  margin-top: 30px;
+  padding:20px 30px;
+  box-shadow: 0 2px 40px 0 rgba(0,0,0,.15);
+  background-color: #FFFBD4;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+@media (max-width:425px){
+  .header__button{
+      margin-right: 10%;
+      margin-top: 20px;
+      padding:10px 15px;
+      box-shadow: 0 1.5px 30px 0 rgba(0,0,0,.15);
+      background-color: #FFFBD4;
+      border-radius: 8px;
+      font-size: 1rem;
+      letter-spacing: 1.7px;
+      z-index: 1;
+  }  
+}
+.features{
+  margin-top: 10px;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  position: relative;
+}
+
+.features__col-heading{
+  border-left: 6px solid var(--light-lilac);
+  padding: 0 20px;
+  font-weight: 700;
+  max-width: 300px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  line-height: 56px;
+}
+@media (max-width: 425px){
+  .features__col-heading{
+      border-left: 6px solid var(--light-lilac);
+      padding: 0 20px;
+      font-weight: 600;
+      max-width: 300px;
+      margin-bottom: 40px;
+      margin-top: 20px;;
+      font-size: 2rem;
+      line-height: 40px;
+  }
+}
+.features__col-2 .features__col-heading{
+  border-left: 6px solid #E9E3FF;
+}
+.features__col-3 .features__col-heading{
+  border-left: 6px solid #f9f2ec;
+}
+.features__col-text{
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 32px;
 }
 .light-coral-edge {
   left: 0;
@@ -176,91 +258,7 @@ header .person-sitting {
      display:none;
   }
 }
-.header__text{
-  margin-right: 25%;
-  margin-top: 14%;
-  font-size: 5.5rem;
-  font-weight: 600;
-  font-family: 'Karla', sans-serif;
-  line-height: 96px;
-  text-shadow: 4px 4px 0 #FFF;
-  z-index: 30;
-}
-@media (max-width: 425px){
-  .header__text{
-      margin-right: 10%;
-      margin-top: 14%;
-      font-size: 2rem;
-      font-weight: 600;
-      font-family: 'Karla', sans-serif;
-      line-height: 40px;
-      text-shadow: 4px 4px 0 #FFF;
-      z-index: 30;
-  }
-}
-.header__button{
-  margin-right: 25%;
-  margin-top: 30px;
-  padding:20px 30px;
-  box-shadow: 0 2px 40px 0 rgba(0,0,0,.15);
-  background-color: #FFFBD4;
-  border-radius: 10px;
-  font-size: 1.125rem;
-  letter-spacing: 2px;
-  z-index: 1;
-}
-@media (max-width:425px){
-  .header__button{
-      margin-right: 10%;
-      margin-top: 20px;
-      padding:10px 15px;
-      box-shadow: 0 1.5px 30px 0 rgba(0,0,0,.15);
-      background-color: #FFFBD4;
-      border-radius: 8px;
-      font-size: 1rem;
-      letter-spacing: 1.7px;
-      z-index: 1;
-  }  
-}
-.features{
-  margin-top: 10px;
-  padding-left: var(--page-padding);
-  padding-right: var(--page-padding);
-  position: relative;
-}
 
-.features__col-heading{
-  border-left: 6px solid var(--light-lilac);
-  padding: 0 20px;
-  font-weight: 700;
-  max-width: 300px;
-  margin-bottom: 40px;
-  font-size: 3rem;
-  line-height: 56px;
-}
-@media (max-width: 425px){
-  .features__col-heading{
-      border-left: 6px solid var(--light-lilac);
-      padding: 0 20px;
-      font-weight: 600;
-      max-width: 300px;
-      margin-bottom: 40px;
-      margin-top: 20px;;
-      font-size: 2rem;
-      line-height: 40px;
-  }
-}
-.features__col-2 .features__col-heading{
-  border-left: 6px solid #E9E3FF;
-}
-.features__col-3 .features__col-heading{
-  border-left: 6px solid #f9f2ec;
-}
-.features__col-text{
-  letter-spacing: 1px;
-  font-size: 1.5rem;
-  line-height: 32px;
-}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: var(--uxa-header-color);
 }
@@ -442,6 +440,10 @@ margin-left: 30px;
     margin-top: 20px;
     font-size: 35px;
   }
+}
+.HomePage{
+  max-width: initial;
+  overflow-x: hidden;
 }
 .bullet {
   color: #47B382;
